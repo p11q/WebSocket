@@ -1,0 +1,10 @@
+includedir=/home/User/Downloads/Catch2-3.5.3/OUT/include
+libdir=/home/User/Downloads/Catch2-3.5.3/OUT/lib
+pkg_version=3.5.3
+
+Name: Catch2-With-Main
+Description: A modern, C++-native test framework for C++14 and above (links in default main)
+Version: ${pkg_version}
+Requires: catch2 = ${pkg_version}
+Cflags: -I${includedir}
+Libs: -L${libdir} -lCatch2Main

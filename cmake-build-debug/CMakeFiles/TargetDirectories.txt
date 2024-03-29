@@ -1,0 +1,6 @@
+/home/User/Projects/C++/WebSocket/cmake-build-debug/CMakeFiles/WebSocket.dir
+/home/User/Projects/C++/WebSocket/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/User/Projects/C++/WebSocket/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/User/Projects/C++/WebSocket/cmake-build-debug/WS_tests/CMakeFiles/WS_tests_run.dir
+/home/User/Projects/C++/WebSocket/cmake-build-debug/WS_tests/CMakeFiles/edit_cache.dir
+/home/User/Projects/C++/WebSocket/cmake-build-debug/WS_tests/CMakeFiles/rebuild_cache.dir

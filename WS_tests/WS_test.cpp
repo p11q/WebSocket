@@ -18,7 +18,9 @@ public:
     uint8_t get_payload_len() const {
         return m_payload_len;
     }
-};TEST_CASE("Packet from bytes array", "[WSProtocol][Packet][Ctor]") {
+
+};
+TEST_CASE("Packet from bytes array", "[WSProtocol][Packet][Ctor]") {
 
     SECTION("hello") {
         unsigned char packet_bytes[] = {0x81, 0x86,

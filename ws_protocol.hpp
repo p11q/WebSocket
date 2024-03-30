@@ -8,7 +8,7 @@
 #include <netinet/ip.h>
 
 class Packet {
-public:
+protected:
     uint8_t m_fin;
     uint8_t m_opcode;
     uint8_t m_mask;

@@ -2,6 +2,7 @@
 #ifndef WEBSOCKET_WS_PROTOCOL_HPP
 #define WEBSOCKET_WS_PROTOCOL_HPP
 
+#include <iostream>
 #include <vector>
 #include <cstdint>
 #include <cstring>
@@ -22,39 +23,44 @@ public:
         m_fin = data[0] >> 7;
         m_opcode = data[0] & 0x0f;
         m_mask = data[1] >> 7;
-        // TODO: throw exception if mask == 1
+
         m_payload_len = data[1] & 0x7f;
+        if (m_mask == 1) {
 
-        if (m_payload_len == 126) {
-            m_payload_len_16 = 0;
-            memcpy(&m_payload_len_16, &data[2], 2);
-            m_payload_len_16 = ntohs(m_payload_len_16);
+            if (m_payload_len == 126) {
+                m_payload_len_16 = 0;
+                memcpy(&m_payload_len_16, &data[2], 2);
+                m_payload_len_16 = ntohs(m_payload_len_16);
 
-            m_masking_key = 0;
-            memcpy(&m_masking_key, &data[4], 4);
-            m_masking_key = ntohl(m_masking_key);
+                m_masking_key = 0;
+                memcpy(&m_masking_key, &data[4], 4);
+                m_masking_key = ntohl(m_masking_key);
 
-            m_payload.resize(m_payload_len_16, 0);
-            memcpy(m_payload.data(), &data[8], m_payload_len_16);
-        }
-        if (m_payload_len == 127) {
-            m_payload_len_64 = 0;
-            memcpy(&m_payload_len_64, &data[2], 8);
-            m_payload_len_64 = ntohs(m_payload_len_64);
+                m_payload.resize(m_payload_len_16, 0);
+                memcpy(m_payload.data(), &data[8], m_payload_len_16);
+            }
+            if (m_payload_len == 127) {
+                m_payload_len_64 = 0;
+                memcpy(&m_payload_len_64, &data[2], 8);
+                m_payload_len_64 = ntohs(m_payload_len_64);
 
-            m_masking_key = 0;
-            memcpy(&m_masking_key, &data[10], 4);
-            m_masking_key = ntohl(m_masking_key);
+                m_masking_key = 0;
+                memcpy(&m_masking_key, &data[10], 4);
+                m_masking_key = ntohl(m_masking_key);
 
-            m_payload.resize(m_payload_len_64, 0);
-            memcpy(m_payload.data(), &data[14], m_payload_len_64);
+                m_payload.resize(m_payload_len_64, 0);
+                memcpy(m_payload.data(), &data[14], m_payload_len_64);
+            } else {
+                m_masking_key = 0;
+                memcpy(&m_masking_key, &data[2], 4);
+
+                m_payload.resize(m_payload_len, 0);
+                memcpy(m_payload.data(), &data[6], m_payload_len);
+                apply_mask();
+            }
         } else {
-            m_masking_key = 0;
-            memcpy(&m_masking_key, &data[2], 4);
-
-            m_payload.resize(m_payload_len, 0);
-            memcpy(m_payload.data(), &data[6], m_payload_len);
-            apply_mask();
+            std::cerr << "The connection is incomparable!" << std::endl;
+            return;
         }
     }
 

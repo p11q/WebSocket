@@ -22,31 +22,56 @@ public:
 };
 TEST_CASE("Packet from bytes array", "[WSProtocol][Packet][Ctor]") {
 
-    SECTION("hello") {
-        unsigned char packet_bytes[] = {0x81, 0x86,
-                                        0x58, 0x6e, 0x24, 0xaf,
-                                        0x30, 0x0b, 0x48, 0xc3, 0x37, 0x64};
+    SECTION("empty bytes") {
+        unsigned char packet_bytes[] = {};
         Packet_test packet{packet_bytes};
-
-        CHECK(packet.get_fin() == 1);
-        CHECK(packet.get_opcode() == 1);
-        CHECK(packet.get_mask() == 1);
-        CHECK(packet.get_payload_len() == 6);
     }
 
     SECTION("zero bytes") {
         unsigned char packet_bytes[] = {0x00, 0x00};
         Packet_test packet{packet_bytes};
+
+        CHECK(packet.get_fin() == 0);
+        CHECK(packet.get_opcode() == 0);
+        CHECK(packet.get_mask() == 0);
+        CHECK(packet.get_payload_len() == 0);
     }
 
-    SECTION("empty bytes") {
-        unsigned char packet_bytes[] = {};
+    SECTION("hello") {
+        unsigned char packet_bytes[] = {0x81, 0x86}; // fin, opcode, mask and payload len
+                                        // Без Payload Data и  Masking-Key
         Packet_test packet{packet_bytes};
 
         CHECK(packet.get_fin() == 1);
         CHECK(packet.get_opcode() == 1);
         CHECK(packet.get_mask() == 1);
         CHECK(packet.get_payload_len() == 6);
-
     }
+
+    SECTION("LevelDB is a high-performance C++ key-value storage library developed by Google."
+            "It provides an orderly mapping of string keys str.") {
+
+        unsigned char packet_bytes[] = {0x81, 0xfe, 0x00, 0x83}; // fin, opcode, mask and payload len(126)
+                                        // Без Payload Data и  Masking-Key
+        Packet_test packet{packet_bytes};
+
+        CHECK(packet.get_fin() == 1);
+        CHECK(packet.get_opcode() == 1);
+        CHECK(packet.get_mask() == 1);
+        CHECK(packet.get_payload_len() == 126);
+    }
+
+   SECTION("") {
+
+        unsigned char packet_bytes[] = {0x81, 0xFF, 0x00, 0x83 /* +4 байта*/ }; // fin, opcode, mask and payload len(126)
+
+        // Без Payload Data
+        Packet_test packet{packet_bytes};
+
+        CHECK(packet.get_fin() == 1);
+        CHECK(packet.get_opcode() == 1);
+        CHECK(packet.get_mask() == 1);
+        CHECK(packet.get_payload_len() == 127);
+    }
+
 }

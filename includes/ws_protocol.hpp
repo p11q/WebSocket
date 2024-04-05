@@ -2,7 +2,6 @@
 #ifndef WEBSOCKET_WS_PROTOCOL_HPP
 #define WEBSOCKET_WS_PROTOCOL_HPP
 
-#include <iostream>
 #include <vector>
 #include <cstdint>
 #include <cstring>
@@ -27,6 +26,15 @@ public:
         m_payload_len = data[1] & 0x7f;
         if (m_mask == 1) {
 
+            if(m_payload_len < 126) {
+                m_masking_key = 0;
+                memcpy(&m_masking_key, &data[2], 4);
+
+                m_payload.resize(m_payload_len, 0);
+                memcpy(m_payload.data(), &data[6], m_payload_len);
+                apply_mask();
+            }
+
             if (m_payload_len == 126) {
                 m_payload_len_16 = 0;
                 memcpy(&m_payload_len_16, &data[2], 2);
@@ -34,10 +42,14 @@ public:
 
                 m_masking_key = 0;
                 memcpy(&m_masking_key, &data[4], 4);
-                m_masking_key = ntohl(m_masking_key);
+/*
+                m_masking_key = ntohl(m_masking_key);  !!!
+*/
 
                 m_payload.resize(m_payload_len_16, 0);
                 memcpy(m_payload.data(), &data[8], m_payload_len_16);
+                apply_mask();
+
             }
             if (m_payload_len == 127) {
                 m_payload_len_64 = 0;
@@ -46,27 +58,33 @@ public:
 
                 m_masking_key = 0;
                 memcpy(&m_masking_key, &data[10], 4);
+/*
                 m_masking_key = ntohl(m_masking_key);
+*/
 
                 m_payload.resize(m_payload_len_64, 0);
                 memcpy(m_payload.data(), &data[14], m_payload_len_64);
-            } else {
-                m_masking_key = 0;
-                memcpy(&m_masking_key, &data[2], 4);
-
-                m_payload.resize(m_payload_len, 0);
-                memcpy(m_payload.data(), &data[6], m_payload_len);
                 apply_mask();
+
             }
-        } else {
-            std::cerr << "The connection is incomparable!" << std::endl;
-            return;
         }
     }
 
     void apply_mask() {
         if (m_payload_len < 126) {
             for (int i = 0; i < m_payload_len; ++i) {
+                uint8_t curr_mask_byte = (m_masking_key & (0xFF << ((i % 4)*8))) >> i * 8;
+                m_payload[i] = m_payload[i] ^ curr_mask_byte;
+            }
+        }
+        if (m_payload_len == 126) {
+            for (int i = 0; i < m_payload_len_16; ++i) {
+                uint8_t curr_mask_byte = (m_masking_key & (0xFF << ((i % 4)*8))) >> i * 8;
+                m_payload[i] = m_payload[i] ^ curr_mask_byte;
+            }
+        }
+        if (m_payload_len == 127) {
+            for (int i = 0; i < m_payload_len_64; ++i) {
                 uint8_t curr_mask_byte = (m_masking_key & (0xFF << ((i % 4)*8))) >> i * 8;
                 m_payload[i] = m_payload[i] ^ curr_mask_byte;
             }

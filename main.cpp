@@ -1,4 +1,4 @@
-#include "ws_protocol.hpp"
+#include "includes/ws_protocol.hpp"
 
 int main() {
     unsigned char packet_bytes[] = {0x81, 0x86,
@@ -25,8 +25,8 @@ int main() {
                                         0xcd, 0x3c, 0x62, 0xe4, 0xc9, 0x38, 0x66, 0xe8,
                                         0xc5, 0x3e, 0x5b};
 
-    Packet packet{packet_bytes};
-    //Packet packet_126{packet_bytes_126};
+    //Packet packet{packet_bytes};
+    Packet packet_126{packet_bytes_126};
 
     return 0;
 }

@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/WebSocket.dir/main.cpp.o -o WebSocket 

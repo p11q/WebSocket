@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/WS_tests_run.dir/WS_test.cpp.o -o WS_tests_run  /usr/lib/libCatch2Main.a /usr/lib/libCatch2.a 

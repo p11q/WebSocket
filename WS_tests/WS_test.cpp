@@ -1,5 +1,5 @@
 #include <catch2/catch_all.hpp>
-#include "includes/ws_protocol.hpp"
+#include "ws_protocol.h"
 #include "numeric"
 
 class Packet_test: public Packet{
@@ -51,8 +51,7 @@ TEST_CASE("Packet from bytes array", "[WSProtocol][Packet][Ctor]") {
         CHECK(packet.get_payload() == "hello");
     }
 
-    SECTION("123456789012345678901234567890123456789012345678901234567890123456789012345-\n"
-            "  6789012345678901234567890123456789012345678901234567890") {
+    SECTION("1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890") {
 
         unsigned char packet_bytes[] = {0x81, 0xfe, 0x00, 0x83,
                                         0xfc, 0x0e, 0x51, 0xd0,
@@ -81,14 +80,13 @@ TEST_CASE("Packet from bytes array", "[WSProtocol][Packet][Ctor]") {
         CHECK(packet.get_mask() == 1);
         CHECK(packet.get_payload_len() == 126);
         CHECK(packet.get_payload_len_16() == 131);
-        CHECK(packet.get_payload() == "123456789012345678901234567890123456789012345678901234567890123456789012345-\n"
-                                      "6789012345678901234567890123456789012345678901234567890");
+        CHECK(packet.get_payload() == "1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890");
 
     }
 
    SECTION("Текст") {
 
-        unsigned char packet_bytes[] = {0x81, 0xFF, 0x00, 0x83 /* +4 байта*/ }; // fin, opcode, mask and payload len(126)
+        unsigned char packet_bytes[] = {0x81, 0xFF, 0x00, 0x83 /* +4 байта#1# */}; // fin, opcode, mask and payload len(126)
                                         // Без Payload Data
         Packet_test packet{packet_bytes};
 

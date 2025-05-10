@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/user/Projects/C++/WebSocket/libs/include -I/home/user/Projects/C++/WebSocket/includes
+CXX_INCLUDES = -I/home/user/Projects/C++/WebSocket/dep/catch/include -I/home/user/Projects/C++/WebSocket/includes
 
 CXX_FLAGS = -g -fdiagnostics-color=always
 

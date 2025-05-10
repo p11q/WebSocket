@@ -7,6 +7,7 @@
 #include <cstring>
 #include <netinet/ip.h>
 
+
 class Packet {
 protected:
     uint8_t m_fin;

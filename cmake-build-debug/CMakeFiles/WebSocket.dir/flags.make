@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/user/Projects/C++/WebSocket/dep/boost/include
 
 CXX_FLAGS = -g -fdiagnostics-color=always
 

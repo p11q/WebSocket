@@ -481,3 +481,46 @@ events:
       
       
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "dep/boost/lib/cmake/boost_thread-1.85.0/boost_thread-config.cmake:118 (find_dependency)"
+      - "dep/boost/lib/cmake/boost_locale-1.85.0/boost_locale-config.cmake:102 (find_package)"
+      - "dep/boost/lib/cmake/Boost-1.85.0/BoostConfig.cmake:141 (find_package)"
+      - "dep/boost/lib/cmake/Boost-1.85.0/BoostConfig.cmake:196 (boost_find_component)"
+      - "dep/boost/lib/cmake/Boost-1.85.0/BoostConfig.cmake:256 (boost_find_all_components)"
+      - "/opt/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindBoost.cmake:594 (find_package)"
+      - "CMakeLists.txt:11 (find_package)"
+    directories:
+      source: "/home/user/Projects/C++/WebSocket/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-h8biN8"
+      binary: "/home/user/Projects/C++/WebSocket/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-h8biN8"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/user/Projects/C++/WebSocket/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-h8biN8'
+        
+        Run Build Command(s): /opt/clion/bin/cmake/linux/x64/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_c278f/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_c278f.dir/build.make CMakeFiles/cmTC_c278f.dir/build
+        make[1]: вход в каталог «/home/user/Projects/C++/WebSocket/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-h8biN8»
+        Building C object CMakeFiles/cmTC_c278f.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fdiagnostics-color=always -o CMakeFiles/cmTC_c278f.dir/src.c.o -c /home/user/Projects/C++/WebSocket/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-h8biN8/src.c
+        Linking C executable cmTC_c278f
+        /opt/clion/bin/cmake/linux/x64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c278f.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_c278f.dir/src.c.o -o cmTC_c278f 
+        make[1]: выход из каталога «/home/user/Projects/C++/WebSocket/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-h8biN8»
+        
+      exitCode: 0
+...

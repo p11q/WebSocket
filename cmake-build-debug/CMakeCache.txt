@@ -14,6 +14,19 @@
 # EXTERNAL cache entries
 ########################
 
+//The directory containing a CMake configuration file for BOOST.
+BOOST_DIR:PATH=BOOST_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for Boost.
+Boost_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/Boost-1.85.0
+
+Boost_FILESYSTEM_LIBRARY_RELEASE:STRING=/home/user/Projects/C++/WebSocket/dep/boost/lib/libboost_filesystem.so.1.85.0
+
+//Path to a file.
+Boost_INCLUDE_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/include
+
+Boost_SYSTEM_LIBRARY_RELEASE:STRING=/home/user/Projects/C++/WebSocket/dep/boost/lib/libboost_system.so.1.85.0
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 
@@ -244,11 +257,166 @@ WebSocket_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 WebSocket_SOURCE_DIR:STATIC=/home/user/Projects/C++/WebSocket
 
+//The directory containing a CMake configuration file for _boost.
+_boost_DIR:PATH=_boost_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for boost_/home/user/Projects/C++/WebSocket/dep/.
+boost_/home/user/Projects/C++/WebSocket/dep/_DIR:PATH=boost_/home/user/Projects/C++/WebSocket/dep/_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for boost_/home/user/Projects/C++/WebSocket/dep/boost/include.
+boost_/home/user/Projects/C++/WebSocket/dep/boost/include_DIR:PATH=boost_/home/user/Projects/C++/WebSocket/dep/boost/include_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for boost_/home/user/Projects/C++/WebSocket/dep/boost.
+boost_/home/user/Projects/C++/WebSocket/dep/boost_DIR:PATH=boost_/home/user/Projects/C++/WebSocket/dep/boost_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for boost_/home/user/Projects/C++/WebSocket/dep.
+boost_/home/user/Projects/C++/WebSocket/dep_DIR:PATH=boost_/home/user/Projects/C++/WebSocket/dep_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for boost.
+boost_DIR:PATH=boost_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for boost_atomic.
+boost_atomic_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_atomic-1.85.0
+
+//The directory containing a CMake configuration file for boost_charconv.
+boost_charconv_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_charconv-1.85.0
+
+//The directory containing a CMake configuration file for boost_chrono.
+boost_chrono_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_chrono-1.85.0
+
+//The directory containing a CMake configuration file for boost_container.
+boost_container_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_container-1.85.0
+
+//The directory containing a CMake configuration file for boost_context.
+boost_context_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_context-1.85.0
+
+//The directory containing a CMake configuration file for boost_contract.
+boost_contract_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_contract-1.85.0
+
+//The directory containing a CMake configuration file for boost_coroutine.
+boost_coroutine_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_coroutine-1.85.0
+
+//The directory containing a CMake configuration file for boost_date_time.
+boost_date_time_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_date_time-1.85.0
+
+//The directory containing a CMake configuration file for boost_exception.
+boost_exception_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_exception-1.85.0
+
+//The directory containing a CMake configuration file for boost_fiber.
+boost_fiber_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_fiber-1.85.0
+
+//The directory containing a CMake configuration file for boost_filesystem.
+boost_filesystem_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_filesystem-1.85.0
+
+//The directory containing a CMake configuration file for boost_graph.
+boost_graph_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_graph-1.85.0
+
+//The directory containing a CMake configuration file for boost_graph_parallel.
+boost_graph_parallel_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_graph_parallel-1.85.0
+
+//The directory containing a CMake configuration file for boost_headers.
+boost_headers_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_headers-1.85.0
+
+//The directory containing a CMake configuration file for boost_iostreams.
+boost_iostreams_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_iostreams-1.85.0
+
+//The directory containing a CMake configuration file for boost_json.
+boost_json_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_json-1.85.0
+
+//The directory containing a CMake configuration file for boost_locale.
+boost_locale_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_locale-1.85.0
+
+//The directory containing a CMake configuration file for boost_log.
+boost_log_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_log-1.85.0
+
+//The directory containing a CMake configuration file for boost_log_setup.
+boost_log_setup_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_log_setup-1.85.0
+
+//The directory containing a CMake configuration file for boost_math_c99.
+boost_math_c99_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_math_c99-1.85.0
+
+//The directory containing a CMake configuration file for boost_math_c99f.
+boost_math_c99f_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_math_c99f-1.85.0
+
+//The directory containing a CMake configuration file for boost_math_c99l.
+boost_math_c99l_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_math_c99l-1.85.0
+
+//The directory containing a CMake configuration file for boost_math_tr1.
+boost_math_tr1_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_math_tr1-1.85.0
+
+//The directory containing a CMake configuration file for boost_math_tr1f.
+boost_math_tr1f_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_math_tr1f-1.85.0
+
+//The directory containing a CMake configuration file for boost_math_tr1l.
+boost_math_tr1l_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_math_tr1l-1.85.0
+
+//The directory containing a CMake configuration file for boost_mpi.
+boost_mpi_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_mpi-1.85.0
+
+//The directory containing a CMake configuration file for boost_nowide.
+boost_nowide_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_nowide-1.85.0
+
+//The directory containing a CMake configuration file for boost_prg_exec_monitor.
+boost_prg_exec_monitor_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_prg_exec_monitor-1.85.0
+
+//The directory containing a CMake configuration file for boost_program_options.
+boost_program_options_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_program_options-1.85.0
+
+//The directory containing a CMake configuration file for boost_python.
+boost_python_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_python-1.85.0
+
+//The directory containing a CMake configuration file for boost_random.
+boost_random_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_random-1.85.0
+
+//The directory containing a CMake configuration file for boost_regex.
+boost_regex_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_regex-1.85.0
+
+//The directory containing a CMake configuration file for boost_serialization.
+boost_serialization_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_serialization-1.85.0
+
+//The directory containing a CMake configuration file for boost_stacktrace_addr2line.
+boost_stacktrace_addr2line_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_stacktrace_addr2line-1.85.0
+
+//The directory containing a CMake configuration file for boost_stacktrace_basic.
+boost_stacktrace_basic_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_stacktrace_basic-1.85.0
+
+//The directory containing a CMake configuration file for boost_stacktrace_noop.
+boost_stacktrace_noop_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_stacktrace_noop-1.85.0
+
+//The directory containing a CMake configuration file for boost_system.
+boost_system_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_system-1.85.0
+
+//The directory containing a CMake configuration file for boost_test_exec_monitor.
+boost_test_exec_monitor_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_test_exec_monitor-1.85.0
+
+//The directory containing a CMake configuration file for boost_thread.
+boost_thread_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_thread-1.85.0
+
+//The directory containing a CMake configuration file for boost_timer.
+boost_timer_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_timer-1.85.0
+
+//The directory containing a CMake configuration file for boost_type_erasure.
+boost_type_erasure_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_type_erasure-1.85.0
+
+//The directory containing a CMake configuration file for boost_unit_test_framework.
+boost_unit_test_framework_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_unit_test_framework-1.85.0
+
+//The directory containing a CMake configuration file for boost_url.
+boost_url_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_url-1.85.0
+
+//The directory containing a CMake configuration file for boost_wave.
+boost_wave_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_wave-1.85.0
+
+//The directory containing a CMake configuration file for boost_wserialization.
+boost_wserialization_DIR:PATH=/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_wserialization-1.85.0
+
 
 ########################
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: Boost_DIR
+Boost_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -333,6 +501,8 @@ CMAKE_GENERATOR_INSTANCE:INTERNAL=
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
+//Test CMAKE_HAVE_LIBC_PTHREAD
+CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/home/user/Projects/C++/WebSocket
@@ -400,10 +570,102 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding Boost
+FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/Boost-1.85.0/BoostConfig.cmake][c ][v1.85.0(1.73)]
 //ADVANCED property for variable: ProcessorCount_cmd_nproc
 ProcessorCount_cmd_nproc-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ProcessorCount_cmd_sysctl
 ProcessorCount_cmd_sysctl-ADVANCED:INTERNAL=1
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
+//ADVANCED property for variable: boost_atomic_DIR
+boost_atomic_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_charconv_DIR
+boost_charconv_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_chrono_DIR
+boost_chrono_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_container_DIR
+boost_container_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_context_DIR
+boost_context_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_contract_DIR
+boost_contract_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_coroutine_DIR
+boost_coroutine_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_date_time_DIR
+boost_date_time_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_exception_DIR
+boost_exception_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_fiber_DIR
+boost_fiber_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_filesystem_DIR
+boost_filesystem_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_graph_DIR
+boost_graph_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_graph_parallel_DIR
+boost_graph_parallel_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_headers_DIR
+boost_headers_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_iostreams_DIR
+boost_iostreams_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_json_DIR
+boost_json_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_locale_DIR
+boost_locale_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_log_DIR
+boost_log_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_log_setup_DIR
+boost_log_setup_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_math_c99_DIR
+boost_math_c99_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_math_c99f_DIR
+boost_math_c99f_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_math_c99l_DIR
+boost_math_c99l_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_math_tr1_DIR
+boost_math_tr1_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_math_tr1f_DIR
+boost_math_tr1f_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_math_tr1l_DIR
+boost_math_tr1l_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_mpi_DIR
+boost_mpi_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_nowide_DIR
+boost_nowide_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_prg_exec_monitor_DIR
+boost_prg_exec_monitor_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_program_options_DIR
+boost_program_options_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_python_DIR
+boost_python_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_random_DIR
+boost_random_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_regex_DIR
+boost_regex_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_serialization_DIR
+boost_serialization_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_stacktrace_addr2line_DIR
+boost_stacktrace_addr2line_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_stacktrace_basic_DIR
+boost_stacktrace_basic_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_stacktrace_noop_DIR
+boost_stacktrace_noop_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_system_DIR
+boost_system_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_test_exec_monitor_DIR
+boost_test_exec_monitor_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_thread_DIR
+boost_thread_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_timer_DIR
+boost_timer_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_type_erasure_DIR
+boost_type_erasure_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_unit_test_framework_DIR
+boost_unit_test_framework_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_url_DIR
+boost_url_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_wave_DIR
+boost_wave_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_wserialization_DIR
+boost_wserialization_DIR-ADVANCED:INTERNAL=1
 

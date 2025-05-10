@@ -5,7 +5,7 @@
 		<Option title="WebSocket"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\WS_tests\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\..\usr\lib\cmake\Catch2\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\dep\;CMake Files\dep\boost\;CMake Files\dep\boost\lib\;CMake Files\dep\boost\lib\cmake\;CMake Files\dep\boost\lib\cmake\Boost-1.85.0\;CMake Files\dep\boost\lib\cmake\boost_headers-1.85.0\;CMake Files\WS_tests\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\..\usr\lib\cmake\Catch2\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/user/Projects/C++/WebSocket/cmake-build-debug"/>
@@ -24,6 +24,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/user/Projects/C++/WebSocket/dep/boost/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/backward"/>
@@ -46,6 +47,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/user/Projects/C++/WebSocket/dep/boost/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/backward"/>
@@ -88,7 +90,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/user/Projects/C++/WebSocket/libs/include"/>
+					<Add directory="/home/user/Projects/C++/WebSocket/dep/catch/include"/>
 					<Add directory="/home/user/Projects/C++/WebSocket/includes"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/x86_64-pc-linux-gnu"/>
@@ -112,7 +114,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/user/Projects/C++/WebSocket/libs/include"/>
+					<Add directory="/home/user/Projects/C++/WebSocket/dep/catch/include"/>
 					<Add directory="/home/user/Projects/C++/WebSocket/includes"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/x86_64-pc-linux-gnu"/>
@@ -138,6 +140,18 @@
 		</Unit>
 		<Unit filename="/home/user/Projects/C++/WebSocket/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/Boost-1.85.0/BoostConfig.cmake">
+			<Option virtualFolder="CMake Files\dep\boost\lib\cmake\Boost-1.85.0\"/>
+		</Unit>
+		<Unit filename="/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/Boost-1.85.0/BoostConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\dep\boost\lib\cmake\Boost-1.85.0\"/>
+		</Unit>
+		<Unit filename="/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_headers-1.85.0/boost_headers-config-version.cmake">
+			<Option virtualFolder="CMake Files\dep\boost\lib\cmake\boost_headers-1.85.0\"/>
+		</Unit>
+		<Unit filename="/home/user/Projects/C++/WebSocket/dep/boost/lib/cmake/boost_headers-1.85.0/boost_headers-config.cmake">
+			<Option virtualFolder="CMake Files\dep\boost\lib\cmake\boost_headers-1.85.0\"/>
 		</Unit>
 		<Unit filename="/home/user/Projects/C++/WebSocket/WS_tests/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\WS_tests\"/>

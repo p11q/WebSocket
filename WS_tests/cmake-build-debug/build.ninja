@@ -52,7 +52,7 @@ build cmake_object_order_depends_target_WS_tests_run: phony || CMakeFiles/WS_tes
 build CMakeFiles/WS_tests_run.dir/WS_test.o: CXX_COMPILER__WS_tests_run_unscanned_Debug /home/user/Projects/C++/WebSocket/WS_tests/WS_test.cpp || cmake_object_order_depends_target_WS_tests_run
   DEP_FILE = CMakeFiles/WS_tests_run.dir/WS_test.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/user/Projects/C++/WebSocket/libs/include -I/home/user/Projects/C++/WebSocket/includes
+  INCLUDES = -I/home/user/Projects/C++/WebSocket/dep/catch/include -I/home/user/Projects/C++/WebSocket/includes
   OBJECT_DIR = CMakeFiles/WS_tests_run.dir
   OBJECT_FILE_DIR = CMakeFiles/WS_tests_run.dir
 

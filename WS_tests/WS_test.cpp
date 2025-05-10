@@ -87,7 +87,7 @@ TEST_CASE("Packet from bytes array", "[WSProtocol][Packet][Ctor]") {
    SECTION("Текст") {
 
         unsigned char packet_bytes[] = {0x81, 0xFF, 0x00, 0x83 /* +4 байта#1# */}; // fin, opcode, mask and payload len(126)
-                                        // Без Payload Data
+                                            // Без Payload Data
         Packet_test packet{packet_bytes};
 
         CHECK(packet.get_fin() == 1);
@@ -98,3 +98,4 @@ TEST_CASE("Packet from bytes array", "[WSProtocol][Packet][Ctor]") {
     }
 
 }
+int q;
